@@ -101,18 +101,21 @@
 
     .botoes a {
       text-decoration: none;
-      background-color: #0077cc;
+      background-color: #010516;
       color: white;
       padding: 15px 30px;
-      border-radius: 8px;
+      border-radius: 50px; /* deixa bem arredondado */
       font-size: 1em;
       font-family: 'Raleway', sans-serif;
-    transition: background-color 0.3s ease;
-}
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      border: 2px solid #003366; /* azul escuro */
+    }
 
-.botoes a:hover {
-  background-color: #005fa3;
-}
+    .botoes a:hover {
+      background-color: #020824;
+      border-color: #005fa3; /* azul mais vibrante no hover */
+    }
+
 
   </style>
 </head>
@@ -139,7 +142,14 @@
     <div class="section reveal">
       <h2>Informações Extras</h2>
       <p>Clique nos botões abaixo se quiser ver outras informações, <br> curiosidades ou notícias sobre o tema!</p>
+
+      <div class="botoes">
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#noticias">Notícias</a>
+      <a href="#saibamais">Saiba Mais</a>
+      </div>
     </div>
+
   </main>
 
   <script>
