@@ -2,14 +2,158 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Extras e Curiosidades | Geleiras</title>
+  <title>Extra Info & Curiosidades | Geleiras</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000414;
+      color: #fff;
+    }
+
+    header {
+      background-color: #010516;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #001122;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header h1, header p {
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      animation-delay: 0.2s;
+    }
+
+    header p {
+      font-size: 1.4em; 
+      color: #ccc;
+      animation-delay: 0.6s;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    .categoria {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .categoria img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .categoria img:hover {
+      transform: scale(1.05);
+    }
+
+    .texto {
+      max-width: 600px;
+      font-size: 1.3em;
+      line-height: 1.6; 
+    }
+
+
+    .invertida {
+      flex-direction: row-reverse;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
   </style>
 </head>
 
 <body>
-    
+  <header>
+    <h1>Informações Extras & Curiosidades</h1>
+    <p>Se você clicou aqui, está interessado em saber mais sobre o tema. Já que foi explicado superficialmente o tema na página inicial, podemos nos aprofundar agora.</p>
+  </header>
+
+  <main>
+    <section class="categoria reveal">
+      <div class="texto">
+        <h2>🚨 Crise de Água Doce: Consequências</h2>
+        <p>A crise de água doce, ou crise hídrica, é a falta de água doce em quantidade e qualidade suficientes para atender às necessidades humanas e ecológicas. As consequências dessa crise podem ir desde prejuizos à saúde pública, afetando a produção de alimentos e acesso à água potável, até situações econômicas, como uma queda na indústria.</p>
+      </div>
+      <img src="https://cdn.oantagonista.com/uploads/2024/10/agua-doce_1730357427634-1024x576.jpg" alt="Água Doce Consequências">
+    </section>
+
+    <section class="categoria invertida reveal">
+      <div class="texto">
+        <h2>💡 Crise de Água Doce: Soluções</h2>
+        <p>Por mais que sejam poucas e desconhecidas, existem algumas soluções para ajudar na resolução da crise de água doce. São elas manutenção de vazamentos, já que 40% da água tratada se perde por vazamentos; restauração de corpos hídricos, como reflorestamentos, controle da poluição e proteção da margem de rios; e até o reuso de águas residuais, para irrigações, descargas e indústrias.</p>
+      </div>
+      <img src="https://123ecos.com.br/wp-content/uploads/2024/09/Biomas-de-Agua-Doce.jpeg" alt="Água Doce Soluções">
+    </section>
+
+    <section class="categoria reveal">
+      <div class="texto">
+        <h2>🔥 Derretimento de Geleiras: Consequências</h2>
+        <p>O derretimento das geleiras tem consequências negativas que de certa forma também afetam a crise de água doce. Algumas delas seriam a elevação do mar, que ameaça cidades costeiras; impactos climáticos, como o aceleramento do aquecimento global; e claramente, escassez hídrica.</p>
+      </div>
+      <img src="https://img.odcdn.com.br/wp-content/uploads/2021/03/shutterstock_324590741.jpg" alt="Derretimento Geleiras Consequências">
+    </section>
+
+      <section class="categoria invertida reveal">
+      <div class="texto">
+        <h2>✨ Derretimento de Geleiras: Soluções</h2>
+        <p>As principais soluções para o derretimento das geleiras incluem a redução drástica das emissões de gases de efeito estufa através da transição para energias renováveis e a melhoria da eficiência energética, e a proteção e restauração de ecossistemas como florestas e zonas úmidas, que sequestram carbono.</p>
+      </div>
+      <img src="https://images.prismic.io/paineldemudancasclimaticas/Z6ns8pbqstJ9-bOB_070122_no_stupa_feat.webp?auto=format,compress" alt="Derretimento Geleiras Soluções">
+    </section>
+  </main>
+
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('visible');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+</script>
+
 </body>
+</html>
