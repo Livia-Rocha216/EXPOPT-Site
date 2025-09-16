@@ -23,10 +23,11 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      z-index: -1;
+      z-index: 0;
       opacity: 0;
       animation: fadeInBg 2s ease-out forwards;
-    }
+}
+
 
     @keyframes fadeInBg {
       to {
@@ -36,21 +37,16 @@
     
     .topo {
       height: 800px;
-      background-image:
-        linear-gradient(to bottom, rgba(0, 4, 20, 0) 60%, rgba(0, 4, 20, 1) 100%),
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('https://vocenaneve.com.br/wp-content/uploads/2022/06/Geleira-Perito-Moreno.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
       font-size: 3em;
-      position: relative;
+      overflow: hidden;
     }
+
 
     @keyframes fadeDown {
       from {
@@ -67,7 +63,10 @@
       animation: fadeDown 2s ease-out forwards;
       opacity: 0;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      z-index: 1;
+      position: relative;
     }
+
 
     main {
       padding: 60px 20px;
@@ -154,6 +153,23 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
+    footer {
+      background-color: #000214;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      font-family: 'Raleway', sans-serif;
+      border-top: 1px solid #001122; /* linha sutil no topo */
+    }
+
+    footer span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #666;
+    }
+
   </style>
 </head>
 <body>
@@ -181,9 +197,9 @@
       <p>Clique nos botões abaixo se quiser ver outras informações, <br> curiosidades ou notícias sobre o tema!</p>
 
       <div class="botoes">
-      <a href="../Pages/Curiosidades.html">Curiosidades</a>
-      <a href="#noticias">Notícias</a>
-      <a href="../Pages/Galeria.html">Galeria</a>
+      <a href="../Pages/Extra Info & Curiosidades.html">Outras Informações e Curiosidades</a>
+      <a href="#noticias">Faça um Quiz!</a>
+      <a href="../Pages/9_ano.html">9° Ano</a>
       </div>
     </div>
 
@@ -207,4 +223,9 @@
     window.addEventListener('load', revealOnScroll);
   </script>
 </body>
+<footer>
+  <strong>Evento: Geleiras em Foco 2025</strong>
+  <span>Desenvolvido por Livia • Todos os direitos reservados</span>
+</footer>
+
 </html>
