@@ -130,6 +130,51 @@
       line-height: 1.4;
     }
 
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .botoes a {
+      text-decoration: none;
+      background-color: #010516;
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      font-family: 'Raleway', sans-serif;
+      transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #003366;
+    }
+
+    .botoes a:hover {
+      background-color: #020824;
+      border-color: #005fa3;
+      transform: scale(1.05); /* efeito de ir pra frente */
+      box-shadow: 0 0 15px rgba(0, 95, 163, 0.4); /* sombra azulada suave */
+    }
+
+    footer {
+      background-color: #010211;
+      color: #ccc;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 0.9em;
+      font-family: 'Raleway', sans-serif;
+      border-top: 1px solid #001122;
+      margin-top: 30px;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #666;
+    }
+
   </style>
 </head>
 
@@ -175,4 +220,13 @@
       </div>
     </section>
 
+    <div class="botoes">
+      <a href="/index.html">Voltar á Página Inicial</a>
+    </div>
 </body>
+
+<footer>
+  <strong>EXPOPT 2025</strong>
+  <span>Colégio Paulo de Tarso <br> Site Desenvolvido por Lívia Rocha • Pesquisa realizada por Gabrielly Forcione, Julia Moreira e Andreza Nascimento.</span>
+</footer>
+</html>
