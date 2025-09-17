@@ -46,6 +46,48 @@
       }
     }
 
+    .info-carrossel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+    }
+
+    .texto {
+      max-width: 500px;
+      font-size: 1.3em;
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    .carrossel {
+      width: 400px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .slides {
+      display: flex;
+      width: calc(400px * 6); /* 6 imagens de 400px */
+      animation: rolar 18s linear infinite;
+    }
+
+    .slides img {
+      width: 400px;
+  height: 250px;
+  object-fit: cover;
+}
+
+@keyframes rolar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1200px); } /* 3 imagens deslizam */
+}
+
+
   </style>
 </head>
 
@@ -54,4 +96,19 @@
       <h1>Visão do 9° Ano</h1>
       <p>Vindo aqui, podemos ver o que o 9° ano tem achado sobre esse tema, suas pesquisas, opiniões e imagens.</p>
     </header>
+
+    <section class="info-carrossel">
+      <div class="texto">
+        <p>Além de serem indicadores climáticos, as geleiras revelam informações sobre eras passadas, ajudam a entender padrões atmosféricos e até influenciam o nível dos oceanos. Estudá-las é como abrir um livro congelado da história da Terra.</p>
+      </div>
+
+      <div class="carrossel">
+        <div class="slides">
+          <img src="https://i.postimg.cc/NGDJtSRc/330bbd8f-1134-4624-8ec2-ee366628f5ec.jpg" alt="Geleira 1">
+          <img src="https://i.postimg.cc/4NFW7c82/798ca1db-9f37-4f8d-ad11-a64d31eae747.jpg" alt="Geleira 2">
+          <img src="https://i.postimg.cc/bNv6wgR2/c4a89fcc-3339-4a10-9b42-1149cfee1d13.jpg" alt="Geleira 3">
+        </div>
+      </div>
+    </section>
+
 </body>
