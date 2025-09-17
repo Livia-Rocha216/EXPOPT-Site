@@ -11,9 +11,47 @@
       padding: 0;
       background-color: #000414;
     }
+
+    .topo-info {
+      background-color: #010516;
+      padding: 80px 20px;
+      text-align: center;
+      border-bottom: 1px solid #011c36;
+      animation: fadeDown 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    .topo-info h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .topo-info p {
+      font-size: 1.4em;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   </style>
 </head>
 
 <body>
-    
+    <header class="topo-info">
+      <h1>Visão do 9° Ano</h1>
+      <p>Vindo aqui, podemos ver o que o 9° ano tem achado sobre esse tema, suas pesquisas, opiniões e imagens.</p>
+    </header>
 </body>
