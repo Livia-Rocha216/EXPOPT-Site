@@ -68,25 +68,32 @@
       overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .carrossel:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
     }
 
     .slides {
       display: flex;
-      width: calc(400px * 6); /* 6 imagens de 400px */
-      animation: rolar 18s linear infinite;
+      width: 1200px; /* 3 imagens de 400px */
+      animation: deslizar 9s infinite;
     }
 
     .slides img {
       width: 400px;
-  height: 250px;
-  object-fit: cover;
-}
+      height: 250px;
+      object-fit: cover;
+    }
 
-@keyframes rolar {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-1200px); } /* 3 imagens deslizam */
-}
-
+    @keyframes deslizar {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-400px); }
+      66% { transform: translateX(-800px); }
+      100% { transform: translateX(0); }
+    }
 
   </style>
 </head>
@@ -99,7 +106,7 @@
 
     <section class="info-carrossel">
       <div class="texto">
-        <p>Além de serem indicadores climáticos, as geleiras revelam informações sobre eras passadas, ajudam a entender padrões atmosféricos e até influenciam o nível dos oceanos. Estudá-las é como abrir um livro congelado da história da Terra.</p>
+        <p>O 9º ano trabalha e pesquisa para descobrir sobre os impactos geológicos do derretimento de geleiras, fazem anotaçõese e planejam apresentações e cartazes. <br> Abaixo, você pode ver o depoimento de alguns deles sobre o tema.</p>
       </div>
 
       <div class="carrossel">
