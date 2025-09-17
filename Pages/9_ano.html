@@ -95,6 +95,41 @@
       100% { transform: translateX(0); }
     }
 
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .item-galeria {
+      width: 250px;
+      text-align: center;
+      color: #ccc;
+      font-size: 1em;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .item-galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item-galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+
+    .item-galeria p {
+      margin-top: 10px;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
   </style>
 </head>
 
@@ -111,10 +146,32 @@
 
       <div class="carrossel">
         <div class="slides">
-          <img src="https://i.postimg.cc/NGDJtSRc/330bbd8f-1134-4624-8ec2-ee366628f5ec.jpg" alt="Geleira 1">
-          <img src="https://i.postimg.cc/4NFW7c82/798ca1db-9f37-4f8d-ad11-a64d31eae747.jpg" alt="Geleira 2">
-          <img src="https://i.postimg.cc/bNv6wgR2/c4a89fcc-3339-4a10-9b42-1149cfee1d13.jpg" alt="Geleira 3">
+          <img src="https://i.postimg.cc/NGDJtSRc/330bbd8f-1134-4624-8ec2-ee366628f5ec.jpg" alt="9º Ano Trabalhando_1">
+          <img src="https://i.postimg.cc/4NFW7c82/798ca1db-9f37-4f8d-ad11-a64d31eae747.jpg" alt="9º Ano Trabalhando_2">
+          <img src="https://i.postimg.cc/bNv6wgR2/c4a89fcc-3339-4a10-9b42-1149cfee1d13.jpg" alt="9º Ano Trabalhando_3">
         </div>
+      </div>
+    </section>
+
+    <section class="galeria">
+      <div class="item-galeria">
+        <img src="https://i.postimg.cc/NGDJtSRc/330bbd8f-1134-4624-8ec2-ee366628f5ec.jpg" alt="Depoimento 1">
+        <p>“Achei interessante como o gelo pode contar a história do planeta.” – João</p>
+      </div>
+
+      <div class="item-galeria">
+        <img src="https://i.postimg.cc/4NFW7c82/798ca1db-9f37-4f8d-ad11-a64d31eae747.jpg" alt="Depoimento 2">
+        <p>“As geleiras mostram que o clima está mudando rápido demais.” – Ana</p>
+      </div>
+
+      <div class="item-galeria">
+        <img src="https://i.postimg.cc/bNv6wgR2/c4a89fcc-3339-4a10-9b42-1149cfee1d13.jpg" alt="Depoimento 3">
+        <p>“Gostei de aprender que elas guardam partículas do passado.” – Lucas</p>
+      </div>
+
+      <div class="item-galeria">
+        <img src="https://i.postimg.cc/bNv6wgR2/c4a89fcc-3339-4a10-9b42-1149cfee1d13.jpg" alt="Depoimento 3">
+        <p>“Gostei de aprender que elas guardam partículas do passado.” – Lucas</p>
       </div>
     </section>
 
