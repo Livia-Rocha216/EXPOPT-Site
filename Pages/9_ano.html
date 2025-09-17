@@ -175,6 +175,17 @@
       color: #666;
     }
 
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 </head>
 
@@ -184,12 +195,12 @@
       <p>Vindo aqui, podemos ver o que o 9° ano tem achado sobre esse tema, suas pesquisas, opiniões e imagens.</p>
     </header>
 
-    <section class="info-carrossel">
+    <section class="info-carrossel reveal">
       <div class="texto">
         <p>O 9º ano trabalha e pesquisa para descobrir sobre os impactos geológicos do derretimento de geleiras, fazem anotaçõese e planejam apresentações e cartazes. <br> Abaixo, você pode ver o depoimento de alguns deles sobre o tema.</p>
       </div>
 
-      <div class="carrossel">
+      <div class="carrossel reveal">
         <div class="slides">
           <img src="https://i.postimg.cc/NGDJtSRc/330bbd8f-1134-4624-8ec2-ee366628f5ec.jpg" alt="9º Ano Trabalhando_1">
           <img src="https://i.postimg.cc/4NFW7c82/798ca1db-9f37-4f8d-ad11-a64d31eae747.jpg" alt="9º Ano Trabalhando_2">
@@ -198,15 +209,15 @@
       </div>
     </section>
 
-    <section class="galeria">
+    <section class="galeria reveal">
       <div class="item-galeria">
-        <img src="https://i.postimg.cc/NGDJtSRc/330bbd8f-1134-4624-8ec2-ee366628f5ec.jpg" alt="Depoimento 1">
-        <p>“Achei interessante como o gelo pode contar a história do planeta.” – João</p>
+        <img src="https://i.postimg.cc/jqHttxSF/IMG-0257.png" alt="Depoimento 1">
+        <p>“Foi gratificante aprender e compartilhar sobre o impacto das geleiras. A experiência na Expo PT me mostrou a importância da conscientização ambiental." — Gabriel <br> <span style="color:#032c53;">(9º Ano Manhã)</span></p>
       </div>
 
       <div class="item-galeria">
-        <img src="https://i.postimg.cc/4NFW7c82/798ca1db-9f37-4f8d-ad11-a64d31eae747.jpg" alt="Depoimento 2">
-        <p>“As geleiras mostram que o clima está mudando rápido demais.” – Ana</p>
+        <img src="https://i.postimg.cc/QMfK6QRc/IMG-0255.png" alt="Depoimento 2">
+        <p>“A Expo PT é uma ótima forma de treinar a capacidade de trabalhar em grupo e aprender assuntos importantes, como as consequências do derretimento das geleiras." — Luiza <br> <span style="color:#032c53;">(9º Ano Manhã)</span></p>
       </div>
 
       <div class="item-galeria">
@@ -223,6 +234,24 @@
     <div class="botoes">
       <a href="/index.html">Voltar á Página Inicial</a>
     </div>
+  
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('visible');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
 </body>
 
 <footer>
