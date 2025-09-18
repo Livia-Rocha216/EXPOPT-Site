@@ -200,7 +200,7 @@
 
       <div class="botoes">
       <a href="Pages/Extra Info & Curiosidades.html">Outras Informações e Curiosidades</a>
-      <a href="#noticias">Faça um Quiz!</a>
+      <a href="#" onclick="confirmQuiz()">Faça um Quiz!</a>
       <a href="Pages/9_ano.html">9° Ano</a>
       </div>
     </div>
@@ -224,6 +224,16 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
   </script>
+
+  <script>
+    function confirmQuiz() {
+      const resposta = confirm("AVISO! É recomendado que você leia o conteúdo da página 'Outras Informações e Curiosidades' antes de fazer o Quiz! Se estiver pronto, selecione 'Ok' para continuar pra página do Quiz.");
+      if (resposta) {
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSexNggwudmzR_Gj_9jYKaemLsZWrs256QHG1_gYQIsvEHGDKw/viewform?usp=header", "_blank");
+      }
+    }
+  </script>
+
 </body>
 <footer>
   <strong>EXPOPT 2025</strong>
